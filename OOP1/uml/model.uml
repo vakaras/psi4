@@ -179,4 +179,42 @@
       <ownedParameter xmi:id="_5FyaMGBbEeGtFJHVZ22MRA" name="value" type="_RJkp4Fk2EeGPufwR2wey4g" isUnique="false"/>
     </ownedOperation>
   </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_X1QUAGBjEeGQm60ZmtsMwA" name="Noun" isAbstract="true">
+    <ownedOperation xmi:id="_jokKAGBjEeGQm60ZmtsMwA" name="show"/>
+    <ownedOperation xmi:id="_oC188GBjEeGQm60ZmtsMwA" name="getValue"/>
+    <ownedOperation xmi:id="_3pAKwGBpEeGQm60ZmtsMwA" name="getNominative" visibility="protected" isAbstract="true"/>
+    <ownedOperation xmi:id="_6LqUwGBpEeGQm60ZmtsMwA" name="getAkkusative" visibility="protected" isAbstract="true"/>
+    <ownedOperation xmi:id="_E0AMcGBqEeGQm60ZmtsMwA" name="getDative" visibility="protected"/>
+    <ownedOperation xmi:id="_GVks4GBqEeGQm60ZmtsMwA" name="getGenitive" visibility="protected"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_d-p7MGBjEeGQm60ZmtsMwA" name="NounPhrase" isAbstract="true">
+    <ownedOperation xmi:id="_ppUykGBjEeGQm60ZmtsMwA" name="show"/>
+    <ownedOperation xmi:id="_qWYs4GBjEeGQm60ZmtsMwA" name="getValue"/>
+    <ownedOperation xmi:id="_VkGFgGBqEeGQm60ZmtsMwA" name="getNominative" visibility="protected" isAbstract="true"/>
+    <ownedOperation xmi:id="_XaBsYGBqEeGQm60ZmtsMwA" name="getAkkusative" visibility="protected" isAbstract="true"/>
+    <ownedOperation xmi:id="_YqZIEGBqEeGQm60ZmtsMwA" name="getDative" visibility="protected" isAbstract="true"/>
+    <ownedOperation xmi:id="_Zaa20GBqEeGQm60ZmtsMwA" name="getGenitive" visibility="protected" isAbstract="true"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_s2_BYGBjEeGQm60ZmtsMwA" name="Feminine"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_5WW2sGBkEeGQm60ZmtsMwA" name="Feminine">
+    <ownedOperation xmi:id="_kO7XsGBpEeGQm60ZmtsMwA" name="getValue" isAbstract="true"/>
+    <ownedOperation xmi:id="_HNLckGBlEeGQm60ZmtsMwA" name="getNominative" visibility="protected"/>
+    <ownedOperation xmi:id="_M2pNMGBqEeGQm60ZmtsMwA" name="getAkkusative" visibility="protected"/>
+    <ownedOperation xmi:id="_OK31MGBqEeGQm60ZmtsMwA" name="getDative" visibility="protected"/>
+    <ownedOperation xmi:id="_PVRy0GBqEeGQm60ZmtsMwA" name="getGenitive" visibility="protected"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_pPCmIGBqEeGQm60ZmtsMwA" name="Masculine">
+    <ownedOperation xmi:id="_r_NAoGBqEeGQm60ZmtsMwA" name="getValue" isAbstract="true"/>
+    <ownedOperation xmi:id="_wf5koGBqEeGQm60ZmtsMwA" name="getNominative" visibility="protected"/>
+    <ownedOperation xmi:id="_xvXBYGBqEeGQm60ZmtsMwA" name="getAkkusative" visibility="protected"/>
+    <ownedOperation xmi:id="_ylGWkGBqEeGQm60ZmtsMwA" name="getDative" visibility="protected"/>
+    <ownedOperation xmi:id="_zPRU8GBqEeGQm60ZmtsMwA" name="getGenitive" visibility="protected"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_29ZMgGBqEeGQm60ZmtsMwA" name="Neuter">
+    <ownedOperation xmi:id="_5IbgsGBqEeGQm60ZmtsMwA" name="getValue" isAbstract="true"/>
+    <ownedOperation xmi:id="_6TfloGBqEeGQm60ZmtsMwA" name="getNominative" visibility="protected"/>
+    <ownedOperation xmi:id="_7BvLsGBqEeGQm60ZmtsMwA" name="getAkkusative" visibility="protected"/>
+    <ownedOperation xmi:id="_7yR30GBqEeGQm60ZmtsMwA" name="getDative" visibility="protected"/>
+    <ownedOperation xmi:id="_8hV9QGBqEeGQm60ZmtsMwA" name="getGenitive" visibility="protected"/>
+  </packagedElement>
 </uml:Model>
