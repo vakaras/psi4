@@ -1,8 +1,6 @@
 package lt.astrauskas.oop1.TemplateMethod
 
-abstract class Noun (value: String) {
-  
-  val word = value
+abstract class Noun (val word: String) {
   
   def show() {
     println("Nominative: " + getNominative())
