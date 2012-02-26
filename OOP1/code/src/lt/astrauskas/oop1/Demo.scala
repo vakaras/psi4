@@ -17,9 +17,19 @@ object Demo {
     nounPhrase.show()
   }
 
+  def show(noun: TemplateMethodScala.Noun) = {
+    println("Word: " + noun.getValue())
+    noun.show()
+  }
+
+  def show(nounPhrase: TemplateMethodScala.NounPhrase) = {
+    println("Phrase: " + nounPhrase.getValue())
+    nounPhrase.show()
+  }
+
   def main(args: Array[String]): Unit = {
     println("Start.")
-    
+
     println("------- Template Method ---------")
     show(new TemplateMethod.FeminineNoun("Hand"))
     show(new TemplateMethod.MaskulineNoun("Hund"))
@@ -33,6 +43,20 @@ object Demo {
     show(new Strategy.NounPhrase("gelb", "Hund", new Strategy.Maskuline()))
     show(new Strategy.NounPhrase("rot", "Haus", new Strategy.Neuter()))
     
+    println("------- Template Method (Scala) ---------")
+    show(new TemplateMethodScala.Noun("Hand")
+        with TemplateMethodScala.Feminine)
+    show(new TemplateMethodScala.Noun("Hund")
+        with TemplateMethodScala.Masculine)
+    show(new TemplateMethodScala.Noun("Haus")
+        with TemplateMethodScala.Neuter)
+    show(new TemplateMethodScala.NounPhrase("bleu", "Hand")
+        with TemplateMethodScala.Feminine)
+    show(new TemplateMethodScala.NounPhrase("gelb", "Hund")
+        with TemplateMethodScala.Masculine)
+    show(new TemplateMethodScala.NounPhrase("rot", "Haus")
+        with TemplateMethodScala.Neuter)
+
     println("Finish.")
   }
 
