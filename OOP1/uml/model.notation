@@ -550,7 +550,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XUm2iVk7EeGIQoBkHAofNA"/>
       </children>
       <element xmi:type="uml:Class" href="model.uml#_XUgv4Fk7EeGIQoBkHAofNA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XUkaQVk7EeGIQoBkHAofNA" x="202" y="269"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XUkaQVk7EeGIQoBkHAofNA" x="125" y="265"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_Yy2WIFk7EeGIQoBkHAofNA" type="2008" fontName="Ubuntu" fontHeight="11" lineColor="0">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Yy29MFk7EeGIQoBkHAofNA" source="ShadowFigure">
@@ -586,7 +586,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Yy4LWVk7EeGIQoBkHAofNA"/>
       </children>
       <element xmi:type="uml:Class" href="model.uml#_YyzS0Fk7EeGIQoBkHAofNA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Yy2WIVk7EeGIQoBkHAofNA" x="407" y="273"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Yy2WIVk7EeGIQoBkHAofNA" x="435" y="275"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_Z1Bk0Fk7EeGIQoBkHAofNA" type="2008" fontName="Ubuntu" fontHeight="11" lineColor="0">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Z1DaAFk7EeGIQoBkHAofNA" source="ShadowFigure">
