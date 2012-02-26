@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_i5kWMVk1EeGPufwR2wey4g" name="model">
+  <packagedElement xmi:type="uml:Class" xmi:id="_kAnd0Fk1EeGPufwR2wey4g" name="Noun" isAbstract="true">
+    <ownedAttribute xmi:id="_UbyokFk2EeGPufwR2wey4g" name="word" visibility="protected" type="_RJkp4Fk2EeGPufwR2wey4g" isUnique="false"/>
+    <ownedAttribute xmi:id="_Kr8CoFk3EeGPufwR2wey4g" name="adjective" type="_rWFaEFk2EeGPufwR2wey4g" aggregation="shared" association="_Kr-e4Fk3EeGPufwR2wey4g">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Kr8CoVk3EeGPufwR2wey4g" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Kr8Colk3EeGPufwR2wey4g" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_qMYcgFk1EeGPufwR2wey4g" name="show" isLeaf="true"/>
+    <ownedOperation xmi:id="_rwD1wFk1EeGPufwR2wey4g" name="getNominative" isAbstract="true"/>
+    <ownedOperation xmi:id="_uAxUIFk1EeGPufwR2wey4g" name="getAkkusative"/>
+    <ownedOperation xmi:id="_6NH8QFk1EeGPufwR2wey4g" name="getDative" isAbstract="true"/>
+    <ownedOperation xmi:id="_8T-UAFk1EeGPufwR2wey4g" name="getGenitive" isAbstract="true"/>
+    <ownedOperation xmi:id="_JHHkcFk4EeGPufwR2wey4g" name="getValue"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_PAKGUFk2EeGPufwR2wey4g" name="DataType0"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_RJkp4Fk2EeGPufwR2wey4g" name="String"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_rWFaEFk2EeGPufwR2wey4g" name="Adjective">
+    <ownedAttribute xmi:id="_UG654Fk4EeGPufwR2wey4g" name="word" visibility="protected" type="_RJkp4Fk2EeGPufwR2wey4g" aggregation="shared"/>
+    <ownedOperation xmi:id="_Qi6noFk4EeGPufwR2wey4g" name="getValue"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_wAwZcFk2EeGPufwR2wey4g" name="Word"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_1khkAFk2EeGPufwR2wey4g" name="Word"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Kr-e4Fk3EeGPufwR2wey4g" name="" visibility="private" memberEnd="_Kr-e4Vk3EeGPufwR2wey4g _Kr8CoFk3EeGPufwR2wey4g">
+    <ownedEnd xmi:id="_Kr-e4Vk3EeGPufwR2wey4g" name="" type="_kAnd0Fk1EeGPufwR2wey4g" association="_Kr-e4Fk3EeGPufwR2wey4g">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Kr-e4lk3EeGPufwR2wey4g" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Kr-e41k3EeGPufwR2wey4g" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_geESMFk3EeGPufwR2wey4g" name="NounPhrase">
+    <ownedAttribute xmi:id="_s62jAFk3EeGPufwR2wey4g" name="adjective" type="_rWFaEFk2EeGPufwR2wey4g" aggregation="shared" association="_s660cFk3EeGPufwR2wey4g">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_s62jAVk3EeGPufwR2wey4g" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_s62jAlk3EeGPufwR2wey4g" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_7gevoFk3EeGPufwR2wey4g" name="noun" type="_kAnd0Fk1EeGPufwR2wey4g" aggregation="shared" association="_7giaAFk3EeGPufwR2wey4g">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7gevoVk3EeGPufwR2wey4g" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7gevolk3EeGPufwR2wey4g" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_ihGg8Fk3EeGPufwR2wey4g" name="show" isLeaf="true"/>
+    <ownedOperation xmi:id="_kUoUEFk3EeGPufwR2wey4g" name="getNominative" isAbstract="true"/>
+    <ownedOperation xmi:id="_lrup4Fk3EeGPufwR2wey4g" name="getAkkusative" isAbstract="true"/>
+    <ownedOperation xmi:id="_nH67EFk3EeGPufwR2wey4g" name="getDative" isAbstract="true"/>
+    <ownedOperation xmi:id="_n-RUQFk3EeGPufwR2wey4g" name="getGenitive" isAbstract="true"/>
+    <ownedOperation xmi:id="_dWc5oFk6EeGIQoBkHAofNA" name="getValue"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_s660cFk3EeGPufwR2wey4g" name="" visibility="protected" memberEnd="_s660cVk3EeGPufwR2wey4g _s62jAFk3EeGPufwR2wey4g">
+    <ownedEnd xmi:id="_s660cVk3EeGPufwR2wey4g" name="" type="_geESMFk3EeGPufwR2wey4g" association="_s660cFk3EeGPufwR2wey4g">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_s660clk3EeGPufwR2wey4g" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_s660c1k3EeGPufwR2wey4g" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_7giaAFk3EeGPufwR2wey4g" name="" visibility="protected" memberEnd="_7giaAVk3EeGPufwR2wey4g _7gevoFk3EeGPufwR2wey4g">
+    <ownedEnd xmi:id="_7giaAVk3EeGPufwR2wey4g" name="" type="_geESMFk3EeGPufwR2wey4g" association="_7giaAFk3EeGPufwR2wey4g">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7giaAlk3EeGPufwR2wey4g" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7giaA1k3EeGPufwR2wey4g" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_i4xkoFk4EeGPufwR2wey4g" name="FeminineNoun">
+    <generalization xmi:id="_sbeC4Fk4EeGPufwR2wey4g" general="_kAnd0Fk1EeGPufwR2wey4g"/>
+    <ownedOperation xmi:id="_xM_4MFk4EeGPufwR2wey4g" name="getNominative"/>
+    <ownedOperation xmi:id="_yc6A4Fk4EeGPufwR2wey4g" name="getDative"/>
+    <ownedOperation xmi:id="_zaZj4Fk4EeGPufwR2wey4g" name="getGenitive"/>
+    <ownedOperation xmi:id="_04kLAFk4EeGPufwR2wey4g" name="getAkkusative"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_7GxZsFk4EeGPufwR2wey4g" name="MaskulineNoun">
+    <generalization xmi:id="_3cqqAVk5EeGIQoBkHAofNA" general="_kAnd0Fk1EeGPufwR2wey4g"/>
+    <ownedOperation xmi:id="_78z0YFk5EeGIQoBkHAofNA" name="getNominative"/>
+    <ownedOperation xmi:id="_-lcDgFk5EeGIQoBkHAofNA" name="getDative"/>
+    <ownedOperation xmi:id="__gpHgFk5EeGIQoBkHAofNA" name="getGenitive"/>
+    <ownedOperation xmi:id="_AurA4Fk6EeGIQoBkHAofNA" name="getAkkusative"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Docf0Fk5EeGPufwR2wey4g" name="NeuterNoun">
+    <generalization xmi:id="_4gb0IFk5EeGIQoBkHAofNA" general="_kAnd0Fk1EeGPufwR2wey4g"/>
+    <ownedOperation xmi:id="_DFfHQFk6EeGIQoBkHAofNA" name="getNominative"/>
+    <ownedOperation xmi:id="_El6_QFk6EeGIQoBkHAofNA" name="getDative"/>
+    <ownedOperation xmi:id="_Fi16gFk6EeGIQoBkHAofNA" name="getGenitive"/>
+    <ownedOperation xmi:id="_GmnEoFk6EeGIQoBkHAofNA" name="getAkkusative"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_DdapoFk7EeGIQoBkHAofNA" name="Noun">
+    <ownedAttribute xmi:id="_UGG6MFk7EeGIQoBkHAofNA" name="gender" type="_HtZREFk7EeGIQoBkHAofNA" aggregation="shared" association="_UGJ9gFk7EeGIQoBkHAofNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UGG6MVk7EeGIQoBkHAofNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UGG6Mlk7EeGIQoBkHAofNA" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_kKCUAFk_EeGAuZs04mA3yQ" name="show"/>
+    <ownedOperation xmi:id="_mVjwYFk_EeGAuZs04mA3yQ" name="getValue"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_HtZREFk7EeGIQoBkHAofNA" name="Gender">
+    <ownedOperation xmi:id="_2wLvwFk_EeGAuZs04mA3yQ" name="getNominative" isAbstract="true" concurrency="concurrent">
+      <ownedParameter xmi:id="_BBu4EFlAEeGAuZs04mA3yQ" name="word" type="_RJkp4Fk2EeGPufwR2wey4g" isUnique="false"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_F4w4cFlAEeGAuZs04mA3yQ" name="Operation0"/>
+    <ownedOperation xmi:id="_JyaqkFlAEeGAuZs04mA3yQ" name="getNominative" isAbstract="true">
+      <ownedParameter xmi:id="_QCruwFlAEeGAuZs04mA3yQ" name="word" type="_RJkp4Fk2EeGPufwR2wey4g" isUnique="false"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_K5fWkFyREeGUoPDADP4e5w" name="getAkkusative">
+      <ownedParameter xmi:id="_bgrLQFyREeGUoPDADP4e5w" name="word" type="_RJkp4Fk2EeGPufwR2wey4g"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Oz29cFk7EeGIQoBkHAofNA" name="NounPhrase">
+    <ownedAttribute xmi:id="_WH9dMFk7EeGIQoBkHAofNA" name="gender" type="_HtZREFk7EeGIQoBkHAofNA" aggregation="shared" association="_WH_5cFk7EeGIQoBkHAofNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WH9dMVk7EeGIQoBkHAofNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WH9dMlk7EeGIQoBkHAofNA" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_vKRHQFk_EeGAuZs04mA3yQ" name="show"/>
+    <ownedOperation xmi:id="_zL6-0Fk_EeGAuZs04mA3yQ" name="getValue"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_UGJ9gFk7EeGIQoBkHAofNA" name="" memberEnd="_UGJ9gVk7EeGIQoBkHAofNA _UGG6MFk7EeGIQoBkHAofNA">
+    <ownedEnd xmi:id="_UGJ9gVk7EeGIQoBkHAofNA" name="" type="_DdapoFk7EeGIQoBkHAofNA" association="_UGJ9gFk7EeGIQoBkHAofNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UGJ9glk7EeGIQoBkHAofNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UGJ9g1k7EeGIQoBkHAofNA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_WH_5cFk7EeGIQoBkHAofNA" name="" memberEnd="_WH_5cVk7EeGIQoBkHAofNA _WH9dMFk7EeGIQoBkHAofNA">
+    <ownedEnd xmi:id="_WH_5cVk7EeGIQoBkHAofNA" name="" type="_Oz29cFk7EeGIQoBkHAofNA" association="_WH_5cFk7EeGIQoBkHAofNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WH_5clk7EeGIQoBkHAofNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WH_5c1k7EeGIQoBkHAofNA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_XUgv4Fk7EeGIQoBkHAofNA" name="Feminine">
+    <generalization xmi:id="_iCkOAFk7EeGIQoBkHAofNA" general="_HtZREFk7EeGIQoBkHAofNA"/>
+    <ownedOperation xmi:id="_V4238FlAEeGAuZs04mA3yQ" name="show">
+      <ownedParameter xmi:id="_ZBKFoFlAEeGAuZs04mA3yQ" name="word" type="_RJkp4Fk2EeGPufwR2wey4g" isUnique="false"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_M6SJoFyREeGUoPDADP4e5w" name="getNominative">
+      <ownedParameter xmi:id="_eh2dQFyREeGUoPDADP4e5w" name="value" type="_RJkp4Fk2EeGPufwR2wey4g"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_YyzS0Fk7EeGIQoBkHAofNA" name="Masculine">
+    <generalization xmi:id="_lAn6kFk7EeGIQoBkHAofNA" general="_HtZREFk7EeGIQoBkHAofNA"/>
+    <ownedOperation xmi:id="_ZzzqkFlAEeGAuZs04mA3yQ" name="show">
+      <ownedParameter xmi:id="_f1m08FlAEeGAuZs04mA3yQ" name="word" type="_RJkp4Fk2EeGPufwR2wey4g" isUnique="false"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Z096cFk7EeGIQoBkHAofNA" name="Neuter">
+    <generalization xmi:id="_dbZ40Vk_EeGAuZs04mA3yQ" general="_HtZREFk7EeGIQoBkHAofNA"/>
+    <ownedOperation xmi:id="_gkCBMFlAEeGAuZs04mA3yQ" name="show">
+      <ownedParameter xmi:id="_jeZgkFlAEeGAuZs04mA3yQ" name="word" type="_RJkp4Fk2EeGPufwR2wey4g" isUnique="false"/>
+    </ownedOperation>
+  </packagedElement>
+</uml:Model>
