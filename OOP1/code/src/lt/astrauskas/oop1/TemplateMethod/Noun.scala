@@ -3,10 +3,10 @@ package lt.astrauskas.oop1.TemplateMethod
 abstract class Noun (val word: String) {
   
   def show() {
-    println("Nominative: " + getNominative())
-    println("Akkusative: " + getAkkusative())
-    println("Dative: " + getDative())
-    println("Genitive: " + getGenitive())
+    println("  Nominative: " + getNominative())
+    println("  Akkusative: " + getAkkusative())
+    println("  Dative:     " + getDative())
+    println("  Genitive:   " + getGenitive())
   }
   
   def getNominative(): String
