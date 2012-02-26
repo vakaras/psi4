@@ -2,12 +2,12 @@ package lt.astrauskas.oop1.TemplateMethod
 
 class MaskulineNoun(value: String) extends Noun(value) {
 
-  def getNominative() = "der " + getValue()
+  protected def getNominative() = "der " + getValue()
   
-  def getAkkusative() = "den " + getValue()
+  protected def getAkkusative() = "den " + getValue()
 
-  def getDative() = "dem " + getValue()
+  protected def getDative() = "dem " + getValue()
 
-  def getGenitive() = "des " + getValue()
+  protected def getGenitive() = "des " + getValue()
 
 }

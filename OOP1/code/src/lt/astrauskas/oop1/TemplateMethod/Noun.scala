@@ -9,13 +9,13 @@ abstract class Noun (val word: String) {
     println("  Genitive:   " + getGenitive())
   }
   
-  def getNominative(): String
+  protected def getNominative(): String
   
-  def getAkkusative(): String
+  protected def getAkkusative(): String
   
-  def getDative(): String
+  protected def getDative(): String
   
-  def getGenitive(): String
+  protected def getGenitive(): String
   
   def getValue() = word
 }
