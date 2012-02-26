@@ -22,6 +22,8 @@ object Demo {
     
     println("------- Strategy ---------")
     show(new Strategy.Noun("Hand", new Strategy.Feminine()))
+    show(new Strategy.Noun("Hund", new Strategy.Maskuline()))
+    show(new Strategy.Noun("Haus", new Strategy.Neuter()))
     
     println("Finish.")
   }
