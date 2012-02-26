@@ -11,6 +11,11 @@ object Demo {
     println("Word: " + noun.getValue())
     noun.show()
   }
+  
+  def show(nounPhrase: Strategy.NounPhrase) = {
+    println("Phrase: " + nounPhrase.getValue())
+    nounPhrase.show()
+  }
 
   def main(args: Array[String]): Unit = {
     println("Start.")
@@ -24,6 +29,9 @@ object Demo {
     show(new Strategy.Noun("Hand", new Strategy.Feminine()))
     show(new Strategy.Noun("Hund", new Strategy.Maskuline()))
     show(new Strategy.Noun("Haus", new Strategy.Neuter()))
+    show(new Strategy.NounPhrase("bleu", "Hand", new Strategy.Feminine()))
+    show(new Strategy.NounPhrase("gelb", "Hund", new Strategy.Maskuline()))
+    show(new Strategy.NounPhrase("rot", "Haus", new Strategy.Neuter()))
     
     println("Finish.")
   }
