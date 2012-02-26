@@ -93,7 +93,16 @@
       <ownedParameter xmi:id="_QCruwFlAEeGAuZs04mA3yQ" name="word" type="_RJkp4Fk2EeGPufwR2wey4g" isUnique="false"/>
     </ownedOperation>
     <ownedOperation xmi:id="_K5fWkFyREeGUoPDADP4e5w" name="getAkkusative">
-      <ownedParameter xmi:id="_bgrLQFyREeGUoPDADP4e5w" name="word" type="_RJkp4Fk2EeGPufwR2wey4g"/>
+      <ownedParameter xmi:id="_bgrLQFyREeGUoPDADP4e5w" name="word" type="_RJkp4Fk2EeGPufwR2wey4g" isUnique="false"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_pgKloWBaEeGtFJHVZ22MRA" name="getDative" isAbstract="true">
+      <ownedParameter xmi:id="_xZ_BkGBaEeGtFJHVZ22MRA" name="value" type="_RJkp4Fk2EeGPufwR2wey4g" isUnique="false"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_yVsb4GBaEeGtFJHVZ22MRA" name="getGenitive" isAbstract="true">
+      <ownedParameter xmi:id="_2CpOwGBaEeGtFJHVZ22MRA" name="value" type="_RJkp4Fk2EeGPufwR2wey4g" isUnique="false"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_4Is8UGBaEeGtFJHVZ22MRA" name="getAkkusative" isAbstract="true">
+      <ownedParameter xmi:id="_8lnzkGBaEeGtFJHVZ22MRA" name="value" type="_RJkp4Fk2EeGPufwR2wey4g" isUnique="false"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_Oz29cFk7EeGIQoBkHAofNA" name="NounPhrase">
@@ -121,8 +130,17 @@
     <ownedOperation xmi:id="_V4238FlAEeGAuZs04mA3yQ" name="show">
       <ownedParameter xmi:id="_ZBKFoFlAEeGAuZs04mA3yQ" name="word" type="_RJkp4Fk2EeGPufwR2wey4g" isUnique="false"/>
     </ownedOperation>
+    <ownedOperation xmi:id="_GYv6gGBbEeGtFJHVZ22MRA" name="getDative">
+      <ownedParameter xmi:id="_Iu-LAGBbEeGtFJHVZ22MRA" name="value" type="_RJkp4Fk2EeGPufwR2wey4g" isUnique="false"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_JPfeIGBbEeGtFJHVZ22MRA" name="getGenitive">
+      <ownedParameter xmi:id="_LzRpgGBbEeGtFJHVZ22MRA" name="value" type="_RJkp4Fk2EeGPufwR2wey4g" isUnique="false"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_M2PiYGBbEeGtFJHVZ22MRA" name="getAkkusative">
+      <ownedParameter xmi:id="_QAc0kGBbEeGtFJHVZ22MRA" name="value" type="_RJkp4Fk2EeGPufwR2wey4g" isUnique="false"/>
+    </ownedOperation>
     <ownedOperation xmi:id="_M6SJoFyREeGUoPDADP4e5w" name="getNominative">
-      <ownedParameter xmi:id="_eh2dQFyREeGUoPDADP4e5w" name="value" type="_RJkp4Fk2EeGPufwR2wey4g"/>
+      <ownedParameter xmi:id="_Fe5hYGBbEeGtFJHVZ22MRA" name="value" type="_RJkp4Fk2EeGPufwR2wey4g" isUnique="false"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_YyzS0Fk7EeGIQoBkHAofNA" name="Masculine">
@@ -130,11 +148,35 @@
     <ownedOperation xmi:id="_ZzzqkFlAEeGAuZs04mA3yQ" name="show">
       <ownedParameter xmi:id="_f1m08FlAEeGAuZs04mA3yQ" name="word" type="_RJkp4Fk2EeGPufwR2wey4g" isUnique="false"/>
     </ownedOperation>
+    <ownedOperation xmi:id="_aKaHIGBbEeGtFJHVZ22MRA" name="getNominative">
+      <ownedParameter xmi:id="_fYO24GBbEeGtFJHVZ22MRA" name="value" type="_RJkp4Fk2EeGPufwR2wey4g" isUnique="false"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_gQ154GBbEeGtFJHVZ22MRA" name="getDative">
+      <ownedParameter xmi:id="_iiOGoGBbEeGtFJHVZ22MRA" name="value" type="_RJkp4Fk2EeGPufwR2wey4g" isUnique="false"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_i8scIGBbEeGtFJHVZ22MRA" name="getGenitive">
+      <ownedParameter xmi:id="_lzHPoGBbEeGtFJHVZ22MRA" name="value" type="_RJkp4Fk2EeGPufwR2wey4g" isUnique="false"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_mdRm8GBbEeGtFJHVZ22MRA" name="getAkkusative">
+      <ownedParameter xmi:id="_q77jkGBbEeGtFJHVZ22MRA" name="value" type="_RJkp4Fk2EeGPufwR2wey4g" isUnique="false"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_Z096cFk7EeGIQoBkHAofNA" name="Neuter">
     <generalization xmi:id="_dbZ40Vk_EeGAuZs04mA3yQ" general="_HtZREFk7EeGIQoBkHAofNA"/>
     <ownedOperation xmi:id="_gkCBMFlAEeGAuZs04mA3yQ" name="show">
       <ownedParameter xmi:id="_jeZgkFlAEeGAuZs04mA3yQ" name="word" type="_RJkp4Fk2EeGPufwR2wey4g" isUnique="false"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_tFAv8GBbEeGtFJHVZ22MRA" name="getNominative">
+      <ownedParameter xmi:id="_vmyJIGBbEeGtFJHVZ22MRA" name="value" type="_RJkp4Fk2EeGPufwR2wey4g" isUnique="false"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_wIu_oGBbEeGtFJHVZ22MRA" name="getDative">
+      <ownedParameter xmi:id="_ykyLUGBbEeGtFJHVZ22MRA" name="value" type="_RJkp4Fk2EeGPufwR2wey4g" isUnique="false"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_zADyEGBbEeGtFJHVZ22MRA" name="getGenitive">
+      <ownedParameter xmi:id="_1bFDAGBbEeGtFJHVZ22MRA" name="value" type="_RJkp4Fk2EeGPufwR2wey4g" isUnique="false"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_17S0IGBbEeGtFJHVZ22MRA" name="getAkkusative">
+      <ownedParameter xmi:id="_5FyaMGBbEeGtFJHVZ22MRA" name="value" type="_RJkp4Fk2EeGPufwR2wey4g" isUnique="false"/>
     </ownedOperation>
   </packagedElement>
 </uml:Model>
