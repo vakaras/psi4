@@ -2,11 +2,12 @@ package lt.astrauskas.oop1.Strategy
 
 class Feminine extends Gender {
 
-  def show(value: String): Unit = {
-    println("Nominative: die " + value)
-    println("Akkusative: die " + value)
-    println("Dative: der " + value)
-    println("Genitive: der " + value)
-  }
+  def getNominative(value: String) = "die " + value
+
+  def getAkkusative(value: String) = "die " + value
+
+  def getDative(value: String) = "der " + value
+
+  def getGenitive(value: String) = "der " + value
 
 }
