@@ -2,8 +2,8 @@ package lt.astrauskas.oop2
 
 trait IStudentExtend extends IStudent {
   
-  def base(): IStudent
+  def baseIHuman(): IStudent
   
-  def schoolClassImpl(): Int = base.schoolClassImpl()
+  def schoolClassImpl(): Int = baseIHuman.schoolClassImpl()
 
 }

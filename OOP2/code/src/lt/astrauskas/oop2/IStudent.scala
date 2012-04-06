@@ -6,6 +6,8 @@ trait IStudent extends IHumanExtend {
   
   def setSelf(newSelf: IStudent): Unit = {
     self = newSelf
+    setSelf(newSelf.asInstanceOf[IHuman])
+    baseIHuman.setSelf(newSelf)
   }
 
   def schoolClass(): Int = self.schoolClassImpl()

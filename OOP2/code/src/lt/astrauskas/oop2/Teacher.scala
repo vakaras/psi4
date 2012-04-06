@@ -7,12 +7,12 @@ class Teacher(
     extends ITeacher {
   
   baseObj.setSelf(this)
-  def base(): IHuman = baseObj
+  def baseIHuman(): IHuman = baseObj
   
   override def toStringImpl(): String = "Teacher: %s (%s)".format(
       fullName(), subject())
   override def fullNameImpl(): String = "%s %s".format(
-      degree(), base.fullNameImpl())
+      degree(), baseIHuman.fullNameImpl())
   def subjectImpl(): String = subjectArg
   def degreeImpl(): String = degreeArg
  

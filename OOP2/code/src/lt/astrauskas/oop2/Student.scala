@@ -4,7 +4,7 @@ class Student(private var baseObj: IHuman, schoolClassArg: Int)
 	extends IStudent {
   
   baseObj.setSelf(this)
-  def base(): IHuman = baseObj
+  def baseIHuman(): IHuman = baseObj
   
   override def toStringImpl(): String = "Student: %s (%d)".format(
       fullName(), schoolClass())

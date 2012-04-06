@@ -8,7 +8,7 @@ class QuakePlayer(
 	extends IQuakePlayer {
 
   baseObj.setSelf(this)
-  def base(): IPlayer = baseObj
+  def baseIPlayer(): IPlayer = baseObj
   
   override def toStringImpl(): String = {
     "Quake Player: deaths=%d kills=%d round=%d".format(

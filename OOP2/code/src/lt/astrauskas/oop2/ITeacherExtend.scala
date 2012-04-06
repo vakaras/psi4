@@ -2,9 +2,9 @@ package lt.astrauskas.oop2
 
 trait ITeacherExtend extends ITeacher {
   
-  def base(): ITeacher
+  def baseIHuman(): ITeacher
   
-  def subjectImpl(): String = base.subjectImpl()
-  def degreeImpl(): String = base.degreeImpl()
+  def subjectImpl(): String = baseIHuman.subjectImpl()
+  def degreeImpl(): String = baseIHuman.degreeImpl()
 
 }

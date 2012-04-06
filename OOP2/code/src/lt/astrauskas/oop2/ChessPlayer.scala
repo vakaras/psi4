@@ -8,7 +8,7 @@ class ChessPlayer(
 	extends IChessPlayer {
   
   baseObj.setSelf(this)
-  def base(): IPlayer = baseObj
+  def baseIPlayer(): IPlayer = baseObj
   
   override def toStringImpl(): String = {
     "Chess player: win=%d loose=%d draw=%d played=%d".format(

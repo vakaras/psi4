@@ -6,6 +6,8 @@ trait IChessPlayer extends IPlayerExtend {
   
   def setSelf(newSelf: IChessPlayer): Unit = {
     self = newSelf
+    setSelf(newSelf.asInstanceOf[IPlayer])
+    baseIPlayer.setSelf(newSelf)
   }
   
   def win(): Int = self.winImpl()

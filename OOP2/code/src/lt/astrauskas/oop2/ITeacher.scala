@@ -6,6 +6,8 @@ trait ITeacher extends IHumanExtend {
   
   def setSelf(newSelf: ITeacher): Unit = {
     self = newSelf
+    setSelf(newSelf.asInstanceOf[IHuman])
+    baseIHuman.setSelf(newSelf)
   }
 
   def subject(): String = self.subjectImpl()

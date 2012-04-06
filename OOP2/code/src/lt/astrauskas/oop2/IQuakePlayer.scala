@@ -6,6 +6,8 @@ trait IQuakePlayer extends IPlayerExtend {
   
   def setSelf(newSelf: IQuakePlayer): Unit = {
     self = newSelf
+    setSelf(newSelf.asInstanceOf[IPlayer])
+    baseIPlayer.setSelf(newSelf)
   }
   
   def deaths(): Int = self.deathsImpl()

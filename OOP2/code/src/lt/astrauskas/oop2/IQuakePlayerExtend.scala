@@ -2,10 +2,10 @@ package lt.astrauskas.oop2
 
 trait IQuakePlayerExtend extends IQuakePlayer {
 
-  def base(): IQuakePlayer
+  def baseIPlayer(): IQuakePlayer
   
-  def deathsImpl(): Int = base.deathsImpl()
-  def killsImpl(): Int = base.killsImpl()
-  def roundsPlayedImpl(): Int = base.roundsPlayedImpl()
+  def deathsImpl(): Int = baseIPlayer.deathsImpl()
+  def killsImpl(): Int = baseIPlayer.killsImpl()
+  def roundsPlayedImpl(): Int = baseIPlayer.roundsPlayedImpl()
   
 }

@@ -2,9 +2,9 @@ package lt.astrauskas.oop2
 
 trait IPlayerExtend extends IPlayer {
 
-  def base(): IPlayer
+  def baseIPlayer(): IPlayer
   
-  def statusImpl(): String = base.statusImpl()
-  def toStringImpl(): String = base.toStringImpl()
+  def statusImpl(): String = baseIPlayer.statusImpl()
+  def toStringImpl(): String = baseIPlayer.toStringImpl()
 
 }
