@@ -44,6 +44,20 @@ object Demo {
     println("(P) Points: " + player1.points())
     println("(P) Status: " + player1.status())
     println("(P) REPR: " + player1.toString())
+    
+    println("----------Testing chess player---------")
+    var chessPlayer: IChessPlayer = new ChessPlayer(
+        player1, 3, 8, 2)
+    println("(P) Points: " + player1.points())
+    println("(P) Status: " + player1.status())
+    println("(P) REPR: " + player1.toString())
+    println("(C) Points: " + chessPlayer.points())
+    println("(C) Status: " + chessPlayer.status())
+    println("(C) REPR: " + chessPlayer.toString())
+    println("(C) Win: " + chessPlayer.win())
+    println("(C) Loose: " + chessPlayer.loose())
+    println("(C) Draw: " + chessPlayer.draw())
+    println("(C) Played: " + chessPlayer.played())
 
     println("End.")
   }
