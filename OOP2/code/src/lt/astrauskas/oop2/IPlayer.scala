@@ -8,11 +8,11 @@ trait IPlayer {
     self = newSelf
   }
   
-  def points(): Int = self.pointsImpl()
+  def points(): Double = self.pointsImpl()
   def status(): String = self.statusImpl()
   override def toString(): String = self.toStringImpl()
   
-  def pointsImpl(): Int
+  def pointsImpl(): Double
   def statusImpl(): String
   def toStringImpl(): String
 
