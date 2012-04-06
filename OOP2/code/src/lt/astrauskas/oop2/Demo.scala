@@ -88,6 +88,18 @@ object Demo {
         player2, 30, 13, 8)
     show("P", player2)
     show("Q", quakePlayer)
+    
+    println("----------Testing chess student---------")
+    var studentPlayingChess = new StudentPlayingChess(
+        student, chessPlayer)
+    show("H", human1)
+    show("S", student)
+    show("P", player1)
+    show("C", chessPlayer)
+    show("SC", studentPlayingChess.asInstanceOf[IHuman])
+    show("SC", studentPlayingChess.asInstanceOf[IStudent])
+    show("SC", studentPlayingChess.asInstanceOf[IPlayer])
+    show("SC", studentPlayingChess.asInstanceOf[IChessPlayer])
 
     println("End.")
   }
