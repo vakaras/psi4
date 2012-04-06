@@ -37,7 +37,13 @@ object Demo {
     println("(T) Full name: " + teacher.fullName())
     println("(T) Degree: " + teacher.degree())
     println("(T) Subject: " + teacher.subject())
-    println("(T) REPR: " + teacher.toString()) 
+    println("(T) REPR: " + teacher.toString())
+
+    println("----------Testing player---------")
+    var player1: IPlayer = new Player()
+    println("(P) Points: " + player1.points())
+    println("(P) Status: " + player1.status())
+    println("(P) REPR: " + player1.toString())
 
     println("End.")
   }
