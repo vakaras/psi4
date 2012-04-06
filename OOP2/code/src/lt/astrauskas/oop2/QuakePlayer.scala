@@ -11,7 +11,7 @@ class QuakePlayer(
   def base(): IPlayer = baseObj
   
   override def toStringImpl(): String = {
-    "Quake Player: deafs=%d kills=%d round=%d".format(
+    "Quake Player: deaths=%d kills=%d round=%d".format(
         deaths(), kills(), roundsPlayed())
   }
   def deathsImpl(): Int = deathsArg
