@@ -1,77 +1,93 @@
 package lt.astrauskas.oop2
 
 object Demo {
-
+  
+  def show(pointerType: String, name: String, value: String): Unit = {
+    println("(%s) %10s: %s".format(pointerType, name, value))
+  }
+  
+  def show(pointerType: String, name: String, value: Int): Unit = {
+    show(pointerType, name, value.toString())
+  }
+  
+  def show(pointerType: String, name: String, value: Double): Unit = {
+    show(pointerType, name, value.toString())
+  }
+  
+  def show(pointerType: String, human: IHuman): Unit = {
+    show(pointerType, "First name", human.firstName())
+    show(pointerType, "Last name", human.lastName())
+    show(pointerType, "Full name", human.fullName())
+    show(pointerType, "REPR", human.toString())
+  }
+  
+  def show(pointerType: String, student: IStudent): Unit = {
+    show(pointerType, student.asInstanceOf[IHuman])
+    show(pointerType, "Class", student.schoolClass())
+  }
+  
+  def show(pointerType: String, teacher: ITeacher): Unit = {
+    show(pointerType, teacher.asInstanceOf[IHuman])
+    show(pointerType, "Degree", teacher.degree())
+    show(pointerType, "Subject", teacher.subject())
+  }
+  
+  def show(pointerType: String, player: IPlayer): Unit = {
+    show(pointerType, "Points", player.points())
+    show(pointerType, "Status", player.status())
+    show(pointerType, "REPR", player.toString())
+  }
+  
+  def show(pointerType: String, chessPlayer: IChessPlayer): Unit = {
+    show(pointerType, chessPlayer.asInstanceOf[IPlayer])
+    show(pointerType, "Win", chessPlayer.win())
+    show(pointerType, "Loose", chessPlayer.loose())
+    show(pointerType, "Draw", chessPlayer.draw())
+    show(pointerType, "Played", chessPlayer.played())
+  }
+  
+  def show(pointerType: String, quakePlayer: IQuakePlayer): Unit = {
+    show(pointerType, quakePlayer.asInstanceOf[IPlayer])
+    show(pointerType, "Deaths", quakePlayer.deaths())
+    show(pointerType, "Kills", quakePlayer.kills())
+    show(pointerType, "Rounds", quakePlayer.roundsPlayed())
+  }
+  
   def main(args: Array[String]): Unit = {
     println("Start.")
     
     println("----------Testing human---------")
     var human1: IHuman = new Human("Vytautas", "Astrauskas")
-    println("(H) First name: " + human1.firstName())
-    println("(H) Last name: " + human1.lastName())
-    println("(H) Full name: " + human1.fullName())
-    println("(H) REPR: " + human1.toString())
+    show("H", human1)
     
     println("----------Testing student---------")
     var student: IStudent = new Student(human1, 10)
-    println("(H) First name: " + human1.firstName())
-    println("(H) Last name: " + human1.lastName())
-    println("(H) Full name: " + human1.fullName())
-    println("(H) REPR: " + human1.toString())
-    println("(S) First name: " + student.firstName())
-    println("(S) Last name: " + student.lastName())
-    println("(S) Full name: " + student.fullName())
-    println("(S) Class: " + student.schoolClass())
-    println("(S) REPR: " + student.toString())
+    show("H", human1)
+    show("S", student)
     
     println("----------Testing teacher---------")
     var human2: IHuman = new Human("Petras", "Petraitis")
     var teacher: ITeacher = new Teacher(
         human2, "m.m.", "matematika")
-    println("(H) First name: " + human2.firstName())
-    println("(H) Last name: " + human2.lastName())
-    println("(H) Full name: " + human2.fullName())
-    println("(H) REPR: " + human2.toString())
-    println("(T) First name: " + teacher.firstName())
-    println("(T) Last name: " + teacher.lastName())
-    println("(T) Full name: " + teacher.fullName())
-    println("(T) Degree: " + teacher.degree())
-    println("(T) Subject: " + teacher.subject())
-    println("(T) REPR: " + teacher.toString())
+    show("H", human2)
+    show("T", teacher)
 
     println("----------Testing player---------")
     var player1: IPlayer = new Player()
-    println("(P) Points: " + player1.points())
-    println("(P) Status: " + player1.status())
-    println("(P) REPR: " + player1.toString())
+    show("P", player1)
     
     println("----------Testing chess player---------")
     var chessPlayer: IChessPlayer = new ChessPlayer(
         player1, 3, 8, 2)
-    println("(P) Points: " + player1.points())
-    println("(P) Status: " + player1.status())
-    println("(P) REPR: " + player1.toString())
-    println("(C) Points: " + chessPlayer.points())
-    println("(C) Status: " + chessPlayer.status())
-    println("(C) REPR: " + chessPlayer.toString())
-    println("(C) Win: " + chessPlayer.win())
-    println("(C) Loose: " + chessPlayer.loose())
-    println("(C) Draw: " + chessPlayer.draw())
-    println("(C) Played: " + chessPlayer.played())
+    show("P", player1)
+    show("C", chessPlayer)
 
     println("----------Testing Quake player---------")
     var player2: IPlayer = new Player()
     var quakePlayer: IQuakePlayer = new QuakePlayer(
         player2, 30, 13, 8)
-    println("(P) Points: " + player2.points())
-    println("(P) Status: " + player2.status())
-    println("(P) REPR: " + player2.toString())
-    println("(Q) Points: " + quakePlayer.points())
-    println("(Q) Status: " + quakePlayer.status())
-    println("(Q) REPR: " + quakePlayer.toString())
-    println("(Q) Deaths: " + quakePlayer.deaths())
-    println("(Q) Kills: " + quakePlayer.kills())
-    println("(Q) Rounds: " + quakePlayer.roundsPlayed())
+    show("P", player2)
+    show("Q", quakePlayer)
 
     println("End.")
   }
