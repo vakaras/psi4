@@ -1,15 +1,22 @@
 package lt.astrauskas.oop2
 
 class QuakePlayer(
-    private var baseObj: IPlayer,
+    private var baseObj: IPlayerUse,
     deathsArg: Int,
     killsArg: Int,
     roundsPlayedArg: Int)
 	extends IQuakePlayer {
 
-  baseObj.setSelf(this)
-  def baseIPlayer(): IPlayer = baseObj
-  
+  var selfValue: IQuakePlayer = this
+  def self: IQuakePlayer = selfValue
+  def setSelf(newSelf: IQuakePlayer): Unit = {
+    selfValue = newSelf
+    baseIPlayer.setSelf(newSelf)
+  }
+  baseObj.setSelf(self)
+
+  def baseIPlayer: IPlayerUse = baseObj
+
   override def toStringImpl(): String = {
     "Quake Player: deaths=%d kills=%d round=%d".format(
         deaths(), kills(), roundsPlayed())
