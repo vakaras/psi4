@@ -84,7 +84,7 @@ object Demo {
 
     println("----------Testing Quake player---------")
     var player2: IPlayerUse = new Player()
-    var quakePlayer: IQuakePlayer = new QuakePlayer(
+    var quakePlayer: IQuakePlayerUse = new QuakePlayer(
         player2, 30, 13, 8)
     show("P", player2)
     show("Q", quakePlayer)
@@ -115,6 +115,20 @@ object Demo {
     show("TC", teacherPlayingChess.asInstanceOf[ITeacher])
     show("TC", teacherPlayingChess.asInstanceOf[IPlayer])
     show("TC", teacherPlayingChess.asInstanceOf[IChessPlayer])
+
+    println("----------Testing Quake student---------")
+    var human3: IHumanUse = new Human("Jonas", "Jonaitis")
+    var student2: IStudentUse = new Student(human3, 4)
+    var studentPlayingQuake = new StudentPlayingQuake(
+        student2, quakePlayer)
+    show("H", human3)
+    show("S", student2)
+    show("P", player2)
+    show("Q", quakePlayer)
+    show("SQ", studentPlayingQuake.asInstanceOf[IHuman])
+    show("SQ", studentPlayingQuake.asInstanceOf[IStudent])
+    show("SQ", studentPlayingQuake.asInstanceOf[IPlayer])
+    show("SQ", studentPlayingQuake.asInstanceOf[IQuakePlayer])
 
     println("End.")
   }

@@ -5,7 +5,7 @@ class QuakePlayer(
     deathsArg: Int,
     killsArg: Int,
     roundsPlayedArg: Int)
-	extends IQuakePlayer {
+	extends IQuakePlayerUse {
 
   var selfValue: IQuakePlayer = this
   def self: IQuakePlayer = selfValue
