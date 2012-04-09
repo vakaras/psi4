@@ -1,11 +1,18 @@
 package lt.astrauskas.oop2
 
-class Student(private var baseObj: IHuman, schoolClassArg: Int)
-	extends IStudent {
-  
-  baseObj.setSelf(this)
-  def baseIHuman(): IHuman = baseObj
-  
+class Student(private var baseObj: IHumanUse, schoolClassArg: Int)
+	extends IStudent with ObjectWithSelf[IStudent]{
+
+  var selfValue: IStudent = this
+  def self: IStudent = selfValue
+  def setSelf(newSelf: IStudent): Unit = {
+    selfValue = newSelf
+    baseIHuman.setSelf(newSelf)
+  }
+  baseObj.setSelf(self)
+
+  def baseIHuman: IHumanUse = baseObj
+
   override def toStringImpl(): String = "Student: %s (%d)".format(
       fullName(), schoolClass())
   def schoolClassImpl(): Int = schoolClassArg
