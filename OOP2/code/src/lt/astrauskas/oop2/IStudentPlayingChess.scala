@@ -1,7 +1,7 @@
 package lt.astrauskas.oop2
 
 trait IStudentPlayingChess
-	extends IStudent with IChessPlayer {
+    extends IStudent with IChessPlayer {
 
   def self: IStudentPlayingChess
 
