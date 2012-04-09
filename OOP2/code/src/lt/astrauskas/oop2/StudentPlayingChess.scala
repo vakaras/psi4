@@ -12,7 +12,7 @@ class StudentPlayingChess(
   def baseIChessPlayer(): IChessPlayer = baseChessPlayer
   
   override def pointsImpl(): Double = {
-    baseIChessPlayer.pointsImpl() * (12 / schoolClass())
+    baseIChessPlayer.pointsImpl() * (12.toDouble / schoolClass())
   }
   
   override def statusImpl(): String = {
