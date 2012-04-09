@@ -1,14 +1,21 @@
 package lt.astrauskas.oop2
 
 class Teacher(
-    private var baseObj: IHuman,
+    private var baseObj: IHumanUse,
     degreeArg: String,
     subjectArg: String)
-    extends ITeacher {
-  
+    extends ITeacher  with ObjectWithSelf[ITeacher] {
+
+  var selfValue: ITeacher = this
+  def self: ITeacher = selfValue
+  def setSelf(newSelf: ITeacher): Unit = {
+    selfValue = newSelf
+    baseIHuman.setSelf(newSelf)
+  }
   baseObj.setSelf(this)
-  def baseIHuman(): IHuman = baseObj
-  
+
+  def baseIHuman: IHumanUse = baseObj
+
   override def toStringImpl(): String = "Teacher: %s (%s)".format(
       fullName(), subject())
   override def fullNameImpl(): String = "%s %s".format(
