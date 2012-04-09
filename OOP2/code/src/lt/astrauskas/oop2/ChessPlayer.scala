@@ -1,15 +1,22 @@
 package lt.astrauskas.oop2
 
 class ChessPlayer(
-    private var baseObj: IPlayer,
+    private var baseObj: IPlayerUse,
     winArg: Int,
     looseArg: Int,
     drawArg: Int)
 	extends IChessPlayer {
-  
+
+  var selfValue: IChessPlayer = this
+  def self: IChessPlayer = selfValue
+  def setSelf(newSelf: IChessPlayer): Unit = {
+    selfValue = newSelf
+    baseIPlayer.setSelf(newSelf)
+  }
   baseObj.setSelf(this)
-  def baseIPlayer(): IPlayer = baseObj
-  
+
+  def baseIPlayer(): IPlayerUse = baseObj
+
   override def toStringImpl(): String = {
     "Chess player: win=%d loose=%d draw=%d played=%d".format(
         win(), loose(), draw(), played()
