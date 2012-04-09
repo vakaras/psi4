@@ -4,7 +4,7 @@ class Teacher(
     private var baseObj: IHumanUse,
     degreeArg: String,
     subjectArg: String)
-    extends ITeacher  with ObjectWithSelf[ITeacher] {
+    extends ITeacherUse {
 
   var selfValue: ITeacher = this
   def self: ITeacher = selfValue

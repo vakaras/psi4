@@ -67,7 +67,7 @@ object Demo {
 
     println("----------Testing teacher---------")
     var human2: IHumanUse = new Human("Petras", "Petraitis")
-    var teacher: ITeacher = new Teacher(
+    var teacher: ITeacherUse = new Teacher(
         human2, "m.m.", "matematika")
     show("H", human2)
     show("T", teacher)
@@ -100,6 +100,21 @@ object Demo {
     show("SC", studentPlayingChess.asInstanceOf[IStudent])
     show("SC", studentPlayingChess.asInstanceOf[IPlayer])
     show("SC", studentPlayingChess.asInstanceOf[IChessPlayer])
+
+    println("----------Testing chess teacher---------")
+    var player3: IPlayerUse = new Player()
+    var chessPlayer2: IChessPlayerUse = new ChessPlayer(
+        player3, 1, 1, 1)
+    var teacherPlayingChess = new TeacherPlayingChess(
+        teacher, chessPlayer2)
+    show("H", human2)
+    show("T", teacher)
+    show("P", player3)
+    show("C", chessPlayer2)
+    show("TC", teacherPlayingChess.asInstanceOf[IHuman])
+    show("TC", teacherPlayingChess.asInstanceOf[ITeacher])
+    show("TC", teacherPlayingChess.asInstanceOf[IPlayer])
+    show("TC", teacherPlayingChess.asInstanceOf[IChessPlayer])
 
     println("End.")
   }
