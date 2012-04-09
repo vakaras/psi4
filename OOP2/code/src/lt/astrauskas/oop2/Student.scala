@@ -3,7 +3,7 @@ package lt.astrauskas.oop2
 class Student(
     private var baseObj: IHumanUse,
     schoolClassArg: Int)
-	extends IStudent with ObjectWithSelf[IStudent] {
+	extends IStudentUse {
 
   var selfValue: IStudent = this
   def self: IStudent = selfValue

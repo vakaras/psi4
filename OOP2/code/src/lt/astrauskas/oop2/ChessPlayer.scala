@@ -5,7 +5,7 @@ class ChessPlayer(
     winArg: Int,
     looseArg: Int,
     drawArg: Int)
-	extends IChessPlayer {
+	extends IChessPlayerUse {
 
   var selfValue: IChessPlayer = this
   def self: IChessPlayer = selfValue
