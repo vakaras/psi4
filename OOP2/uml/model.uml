@@ -256,4 +256,50 @@
     </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_FqGb4IJ1EeGlQ4emsjZ__Q" name="T"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_1mwt8ILeEeGi3YkMo9cPpw" name="Human">
+    <ownedOperation xmi:id="_qqvP0ILfEeGi3YkMo9cPpw" name="firstName"/>
+    <ownedOperation xmi:id="_2Hdx0ILfEeGi3YkMo9cPpw" name="lastName"/>
+    <ownedOperation xmi:id="_24ci0ILfEeGi3YkMo9cPpw" name="fullName"/>
+    <ownedOperation xmi:id="_3wXpUILfEeGi3YkMo9cPpw" name="toString"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_2tQb8ILeEeGi3YkMo9cPpw" name="Student">
+    <generalization xmi:id="_-uWkkILeEeGi3YkMo9cPpw" general="_1mwt8ILeEeGi3YkMo9cPpw"/>
+    <ownedOperation xmi:id="_5V4OkILfEeGi3YkMo9cPpw" name="schoolClass"/>
+    <ownedOperation xmi:id="_6uQ90ILfEeGi3YkMo9cPpw" name="Operation0"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_3nOw4ILeEeGi3YkMo9cPpw" name="Teacher">
+    <generalization xmi:id="__YyosILeEeGi3YkMo9cPpw" general="_1mwt8ILeEeGi3YkMo9cPpw"/>
+    <ownedOperation xmi:id="_7bJR8ILfEeGi3YkMo9cPpw" name="subject"/>
+    <ownedOperation xmi:id="_8pZ00ILfEeGi3YkMo9cPpw" name="degree"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_5cUDMILeEeGi3YkMo9cPpw" name="Player">
+    <ownedOperation xmi:id="__dr6UILfEeGi3YkMo9cPpw" name="points"/>
+    <ownedOperation xmi:id="_AU_80ILgEeGi3YkMo9cPpw" name="status"/>
+    <ownedOperation xmi:id="_A6WFkILgEeGi3YkMo9cPpw" name="toString"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_6Pl6QILeEeGi3YkMo9cPpw" name="ChessPlayer">
+    <generalization xmi:id="_BQqwUILfEeGi3YkMo9cPpw" general="_5cUDMILeEeGi3YkMo9cPpw"/>
+    <ownedOperation xmi:id="_Dn20sILgEeGi3YkMo9cPpw" name="win"/>
+    <ownedOperation xmi:id="_EJVKEILgEeGi3YkMo9cPpw" name="loose"/>
+    <ownedOperation xmi:id="_Ew_nAILgEeGi3YkMo9cPpw" name="draw"/>
+    <ownedOperation xmi:id="_Fb_r0ILgEeGi3YkMo9cPpw" name="played"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_7fSAgILeEeGi3YkMo9cPpw" name="QuakePlayer">
+    <generalization xmi:id="_CVVSUILfEeGi3YkMo9cPpw" general="_5cUDMILeEeGi3YkMo9cPpw"/>
+    <ownedOperation xmi:id="_HceV0ILgEeGi3YkMo9cPpw" name="deaths"/>
+    <ownedOperation xmi:id="_IBV9cILgEeGi3YkMo9cPpw" name="kills"/>
+    <ownedOperation xmi:id="_IvW6AILgEeGi3YkMo9cPpw" name="roundsPlayed"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_FlVqgILfEeGi3YkMo9cPpw" name="StudentPlayingChess">
+    <generalization xmi:id="_MbitUILfEeGi3YkMo9cPpw" general="_2tQb8ILeEeGi3YkMo9cPpw"/>
+    <generalization xmi:id="_Nj-8EILfEeGi3YkMo9cPpw" general="_6Pl6QILeEeGi3YkMo9cPpw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_H2i4IILfEeGi3YkMo9cPpw" name="StudentPlayingQuake">
+    <generalization xmi:id="_OlXgkILfEeGi3YkMo9cPpw" general="_2tQb8ILeEeGi3YkMo9cPpw"/>
+    <generalization xmi:id="_P3lWYILfEeGi3YkMo9cPpw" general="_7fSAgILeEeGi3YkMo9cPpw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_KKlXUILfEeGi3YkMo9cPpw" name="TeacherPlayingChess">
+    <generalization xmi:id="_Q5m0EILfEeGi3YkMo9cPpw" general="_3nOw4ILeEeGi3YkMo9cPpw"/>
+    <generalization xmi:id="_RmnEAILfEeGi3YkMo9cPpw" general="_6Pl6QILeEeGi3YkMo9cPpw"/>
+  </packagedElement>
 </uml:Model>
