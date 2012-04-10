@@ -10,12 +10,22 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_qyHjQYJoEeGlQ4emsjZ__Q" name="IHuman">
     <generalization xmi:id="_yBWxIIJoEeGlQ4emsjZ__Q" general="_QDbCIIJfEeGCqb0S9bOhTg"/>
+    <ownedOperation xmi:id="_V6mF4ILYEeGi3YkMo9cPpw" name="firstName"/>
+    <ownedOperation xmi:id="_bKAKAILYEeGi3YkMo9cPpw" name="lastName"/>
+    <ownedOperation xmi:id="_fpE9YILYEeGi3YkMo9cPpw" name="fullName"/>
+    <ownedOperation xmi:id="_iEf28ILYEeGi3YkMo9cPpw" name="toString"/>
+    <ownedOperation xmi:id="_jeVXsILYEeGi3YkMo9cPpw" name="firstNameImpl" isAbstract="true"/>
+    <ownedOperation xmi:id="_lUvfsILYEeGi3YkMo9cPpw" name="lastNameImpl" isAbstract="true"/>
+    <ownedOperation xmi:id="_nq9wMILYEeGi3YkMo9cPpw" name="fullNameImpl" isAbstract="true"/>
+    <ownedOperation xmi:id="_o57dsILYEeGi3YkMo9cPpw" name="toStringImpl" isAbstract="true"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_38t8UIJoEeGlQ4emsjZ__Q" name="IHumanExtend">
     <generalization xmi:id="_7P-c0IJoEeGlQ4emsjZ__Q" general="_qyHjQYJoEeGlQ4emsjZ__Q"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_79_ZYIJoEeGlQ4emsjZ__Q" name="IStudent">
     <generalization xmi:id="_AK9JEIJpEeGlQ4emsjZ__Q" general="_38t8UIJoEeGlQ4emsjZ__Q"/>
+    <ownedOperation xmi:id="_JF2LkILZEeGi3YkMo9cPpw" name="schoolClass"/>
+    <ownedOperation xmi:id="_KlSlEILZEeGi3YkMo9cPpw" name="schoolClassImpl"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_BflZsIJpEeGlQ4emsjZ__Q" name="IStudentUse">
     <generalization xmi:id="_C2W_YIJpEeGlQ4emsjZ__Q" general="_79_ZYIJoEeGlQ4emsjZ__Q"/>
@@ -23,13 +33,24 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_HKef8IJpEeGlQ4emsjZ__Q" name="ITeacher">
     <generalization xmi:id="_JQr-gIJpEeGlQ4emsjZ__Q" general="_38t8UIJoEeGlQ4emsjZ__Q"/>
+    <ownedOperation xmi:id="_Sz6MUILZEeGi3YkMo9cPpw" name="subject"/>
+    <ownedOperation xmi:id="_TnMqcILZEeGi3YkMo9cPpw" name="degree"/>
+    <ownedOperation xmi:id="_UOlakILZEeGi3YkMo9cPpw" name="subjectImpl"/>
+    <ownedOperation xmi:id="_VHIzMILZEeGi3YkMo9cPpw" name="degreeImpl"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_LrsoYIJpEeGlQ4emsjZ__Q" name="ITeacherUse">
     <generalization xmi:id="_NU8eIIJpEeGlQ4emsjZ__Q" general="_HKef8IJpEeGlQ4emsjZ__Q"/>
     <generalization xmi:id="_OinLIIJpEeGlQ4emsjZ__Q" general="_QDbCIIJfEeGCqb0S9bOhTg"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_VQNEgIJpEeGlQ4emsjZ__Q" name="IPlayer"/>
-  <packagedElement xmi:type="uml:Interface" xmi:id="_XiX7cIJpEeGlQ4emsjZ__Q" name="IPlayer"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_XiX7cIJpEeGlQ4emsjZ__Q" name="IPlayer">
+    <ownedOperation xmi:id="_l6bxQILZEeGi3YkMo9cPpw" name="points"/>
+    <ownedOperation xmi:id="_m-q1cILZEeGi3YkMo9cPpw" name="status"/>
+    <ownedOperation xmi:id="_npxA4ILZEeGi3YkMo9cPpw" name="toString"/>
+    <ownedOperation xmi:id="_oXLggILZEeGi3YkMo9cPpw" name="pointsImpl"/>
+    <ownedOperation xmi:id="_pSw_AILZEeGi3YkMo9cPpw" name="statusImpl"/>
+    <ownedOperation xmi:id="_qe0icILZEeGi3YkMo9cPpw" name="toStringImpl"/>
+  </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_Y7ylcIJpEeGlQ4emsjZ__Q" name="IPlayerExtend">
     <generalization xmi:id="_bGlpEIJpEeGlQ4emsjZ__Q" general="_XiX7cIJpEeGlQ4emsjZ__Q"/>
   </packagedElement>
@@ -39,6 +60,14 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_jdPK8IJpEeGlQ4emsjZ__Q" name="IChessPlayer">
     <generalization xmi:id="_mVVZcIJpEeGlQ4emsjZ__Q" general="_Y7ylcIJpEeGlQ4emsjZ__Q"/>
+    <ownedOperation xmi:id="_v1P3wILdEeGi3YkMo9cPpw" name="win"/>
+    <ownedOperation xmi:id="_w8qLwILdEeGi3YkMo9cPpw" name="loose"/>
+    <ownedOperation xmi:id="_yEkPAILdEeGi3YkMo9cPpw" name="draw"/>
+    <ownedOperation xmi:id="_0TrK4ILdEeGi3YkMo9cPpw" name="played"/>
+    <ownedOperation xmi:id="_2VG3IILdEeGi3YkMo9cPpw" name="winImpl"/>
+    <ownedOperation xmi:id="_3FyGIILdEeGi3YkMo9cPpw" name="looseImpl"/>
+    <ownedOperation xmi:id="_-fRcMILdEeGi3YkMo9cPpw" name="drawImpl"/>
+    <ownedOperation xmi:id="__uQX0ILdEeGi3YkMo9cPpw" name="playedImpl"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_pNOMkIJpEeGlQ4emsjZ__Q" name="IChessPlayerUse">
     <generalization xmi:id="_smZH0IJpEeGlQ4emsjZ__Q" general="_jdPK8IJpEeGlQ4emsjZ__Q"/>
@@ -46,6 +75,12 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_yZWk8IJpEeGlQ4emsjZ__Q" name="IQuakePlayer">
     <generalization xmi:id="_0cjy0IJpEeGlQ4emsjZ__Q" general="_Y7ylcIJpEeGlQ4emsjZ__Q"/>
+    <ownedOperation xmi:id="_RRwDwILeEeGi3YkMo9cPpw" name="deaths"/>
+    <ownedOperation xmi:id="_SVGXIILeEeGi3YkMo9cPpw" name="kills"/>
+    <ownedOperation xmi:id="_UvShoILeEeGi3YkMo9cPpw" name="roundsPlayed"/>
+    <ownedOperation xmi:id="_WCB74ILeEeGi3YkMo9cPpw" name="deathsImpl"/>
+    <ownedOperation xmi:id="_XhJlQILeEeGi3YkMo9cPpw" name="killsImpl"/>
+    <ownedOperation xmi:id="_Ym5sYILeEeGi3YkMo9cPpw" name="roundsPlayedImpl"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_1Mc-sIJpEeGlQ4emsjZ__Q" name="IQuakePlayerUse">
     <generalization xmi:id="_39IWkIJpEeGlQ4emsjZ__Q" general="_yZWk8IJpEeGlQ4emsjZ__Q"/>
