@@ -6,10 +6,12 @@ object Demo {
     println("Start.")
 
     var human: IHuman = new Human("Vytautas", "Astrauskas")
-    println("Full name: " + human.fullName())
+    println("Full name: " + human.fullName)
 
-    var manager = new DecoratorManager(human)
-    println("Full name: " + manager.fullName())
+    var withEmail = new HumanWithEmail(
+        human, "vastrauskas@gmail.com")
+    println("Full name:    " + withEmail.fullName)
+    println("Pretty email: " + withEmail.prettyEmail)
 
     println("End.")
   }
