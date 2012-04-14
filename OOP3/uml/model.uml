@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_fOc2AYY9EeGyoJv1sk6Jxg" name="Model">
+  <packageImport xmi:id="_fOddEIY9EeGyoJv1sk6Jxg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_hHVDMIY9EeGyoJv1sk6Jxg" name="IHuman">
+    <ownedOperation xmi:id="_qdorQIY9EeGyoJv1sk6Jxg" name="firstName"/>
+    <ownedOperation xmi:id="_rj-BMIY9EeGyoJv1sk6Jxg" name="lastName"/>
+    <ownedOperation xmi:id="_z0dwYIZAEeGyoJv1sk6Jxg" name="fullName"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_j9n64IY9EeGyoJv1sk6Jxg" name="Human" clientDependency="_mRxu0IY9EeGyoJv1sk6Jxg">
+    <interfaceRealization xmi:id="_mRxu0IY9EeGyoJv1sk6Jxg" name="" supplier="_hHVDMIY9EeGyoJv1sk6Jxg" client="_j9n64IY9EeGyoJv1sk6Jxg" contract="_hHVDMIY9EeGyoJv1sk6Jxg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_0ISLoIY9EeGyoJv1sk6Jxg" name="Decorator">
+    <generalization xmi:id="_4qsm4IY9EeGyoJv1sk6Jxg" general="_hHVDMIY9EeGyoJv1sk6Jxg"/>
+    <ownedOperation xmi:id="_pr524IY-EeGyoJv1sk6Jxg" name="setComponent" visibility="public">
+      <ownedParameter xmi:id="_z3b2wIY-EeGyoJv1sk6Jxg" name="component" type="_hHVDMIY9EeGyoJv1sk6Jxg" isUnique="false"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_5_pnoIY9EeGyoJv1sk6Jxg" name="" visibility="protected" memberEnd="_5_pnpIY9EeGyoJv1sk6Jxg _5_pnoYY9EeGyoJv1sk6Jxg" navigableOwnedEnd="_5_pnoYY9EeGyoJv1sk6Jxg">
+    <ownedEnd xmi:id="_5_pnoYY9EeGyoJv1sk6Jxg" name="component" type="_hHVDMIY9EeGyoJv1sk6Jxg" aggregation="shared" association="_5_pnoIY9EeGyoJv1sk6Jxg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5_pnooY9EeGyoJv1sk6Jxg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5_pno4Y9EeGyoJv1sk6Jxg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_5_pnpIY9EeGyoJv1sk6Jxg" name="" type="_0ISLoIY9EeGyoJv1sk6Jxg" association="_5_pnoIY9EeGyoJv1sk6Jxg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5_pnpYY9EeGyoJv1sk6Jxg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5_pnpoY9EeGyoJv1sk6Jxg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_I2ECQIY-EeGyoJv1sk6Jxg" name="DecoratorManager" clientDependency="_MLj-cIY-EeGyoJv1sk6Jxg">
+    <generalization xmi:id="_K-qtgIY-EeGyoJv1sk6Jxg" general="_0ISLoIY9EeGyoJv1sk6Jxg"/>
+    <interfaceRealization xmi:id="_MLj-cIY-EeGyoJv1sk6Jxg" name="" supplier="_0ISLoIY9EeGyoJv1sk6Jxg" client="_I2ECQIY-EeGyoJv1sk6Jxg" contract="_0ISLoIY9EeGyoJv1sk6Jxg"/>
+    <ownedOperation xmi:id="_PeB0wIY-EeGyoJv1sk6Jxg" name="get">
+      <ownedParameter xmi:id="_I1lEoIY_EeGyoJv1sk6Jxg" name="decorator" type="_kxPTsIY-EeGyoJv1sk6Jxg" isUnique="false"/>
+      <ownedParameter xmi:id="_PDy6YIY_EeGyoJv1sk6Jxg" type="_hA-HEIY-EeGyoJv1sk6Jxg" isUnique="false" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_SU0mQIY_EeGyoJv1sk6Jxg" name="remove">
+      <ownedParameter xmi:id="_VfoVYIY_EeGyoJv1sk6Jxg" name="decorator" type="_kxPTsIY-EeGyoJv1sk6Jxg" isUnique="false"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_XrRGgIY_EeGyoJv1sk6Jxg" name="add">
+      <ownedParameter xmi:id="_ein_4IY_EeGyoJv1sk6Jxg" name="decorator" type="_0ISLoIY9EeGyoJv1sk6Jxg" isUnique="false"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_fI5LIIY-EeGyoJv1sk6Jxg" name="Student" clientDependency="_wWHPoIY_EeGyoJv1sk6Jxg">
+    <interfaceRealization xmi:id="_wWHPoIY_EeGyoJv1sk6Jxg" name="" supplier="_0ISLoIY9EeGyoJv1sk6Jxg" client="_fI5LIIY-EeGyoJv1sk6Jxg" contract="_0ISLoIY9EeGyoJv1sk6Jxg"/>
+    <ownedOperation xmi:id="_9gb74IY_EeGyoJv1sk6Jxg" name="school"/>
+    <ownedOperation xmi:id="_-pKegIY_EeGyoJv1sk6Jxg" name="school_class"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_hA-HEIY-EeGyoJv1sk6Jxg" name="Option"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jMPEwIY-EeGyoJv1sk6Jxg" name="Alumni" clientDependency="_xJ0kgIY_EeGyoJv1sk6Jxg">
+    <interfaceRealization xmi:id="_xJ0kgIY_EeGyoJv1sk6Jxg" name="" supplier="_0ISLoIY9EeGyoJv1sk6Jxg" client="_jMPEwIY-EeGyoJv1sk6Jxg" contract="_0ISLoIY9EeGyoJv1sk6Jxg"/>
+    <ownedOperation xmi:id="_2PIcAIZAEeGyoJv1sk6Jxg" name="university"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_kxPTsIY-EeGyoJv1sk6Jxg" name="Class"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_iJbugIY_EeGyoJv1sk6Jxg" name="HumanWithEmail" clientDependency="_sQUe8IY_EeGyoJv1sk6Jxg">
+    <interfaceRealization xmi:id="_sQUe8IY_EeGyoJv1sk6Jxg" name="" supplier="_0ISLoIY9EeGyoJv1sk6Jxg" client="_iJbugIY_EeGyoJv1sk6Jxg" contract="_0ISLoIY9EeGyoJv1sk6Jxg"/>
+    <ownedOperation xmi:id="_38gZQIY_EeGyoJv1sk6Jxg" name="email"/>
+    <ownedOperation xmi:id="_61weUIY_EeGyoJv1sk6Jxg" name="prettyEmail"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_DpWa4IZAEeGyoJv1sk6Jxg" name="Teacher" clientDependency="_HEoO8IZAEeGyoJv1sk6Jxg">
+    <interfaceRealization xmi:id="_HEoO8IZAEeGyoJv1sk6Jxg" name="" supplier="_0ISLoIY9EeGyoJv1sk6Jxg" client="_DpWa4IZAEeGyoJv1sk6Jxg" contract="_0ISLoIY9EeGyoJv1sk6Jxg"/>
+    <ownedOperation xmi:id="_KAaqoIZAEeGyoJv1sk6Jxg" name="subject"/>
+    <ownedOperation xmi:id="_LR45kIZAEeGyoJv1sk6Jxg" name="degree"/>
+    <ownedOperation xmi:id="_MAE1QIZAEeGyoJv1sk6Jxg" name="fullName"/>
+  </packagedElement>
+</uml:Model>
