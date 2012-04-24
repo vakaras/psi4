@@ -13,6 +13,21 @@ object Demo {
     }
   }
 
+  def remove[T <: Decorator : Manifest](human: IHuman): IHuman = {
+    val m = manifest[T]
+    println("Trying to remove: " + m)
+    human match {
+      case decorator: Decorator => {
+        println("  Decorated. Removing.")
+        return decorator.remove(m)
+      }
+      case _ => {
+        println("  Not decorated.")
+        return human
+      }
+    }
+  }
+
   def main(args: Array[String]): Unit = {
     println("Start.")
 
@@ -34,6 +49,10 @@ object Demo {
         (human: Student) => println("School: " + human.school))
 
     withEmail.setComponent(human)
+    remove[Student](withEmail) match {
+      case decorator: HumanWithEmail => withEmail = decorator
+      case _ =>
+    }
     println("Removed decorator Student.")
 
     show(withEmail,
@@ -53,6 +72,12 @@ object Demo {
         (human: WithPassport) => println(
             "Passport information: " +
             human.passportInformation()))
+
+    human = remove[Teacher](withPassport)
+    human = remove[Teacher](human)
+    human = remove[HumanWithEmail](human)
+    human = remove[WithPassport](human)
+    human = remove[Student](human)
 
     println("End.")
   }

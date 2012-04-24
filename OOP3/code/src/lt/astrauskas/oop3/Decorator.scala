@@ -8,7 +8,7 @@ class Decorator(
     component = newComponent
   }
 
-  def get(manifest: Manifest[_ <: Decorator]):
+  def get(manifest: Manifest[_ <: IHuman]):
       Option[_ <: Decorator] = {
     if (ClassManifest.singleType(this) <:< manifest)
       Some(this)
@@ -23,6 +23,20 @@ class Decorator(
       component.asInstanceOf[Decorator].getUndecorated()
     else
       component
+  }
+
+  def remove(manifest: Manifest[_ <: Decorator]): IHuman = {
+    if (ClassManifest.singleType(this) <:< manifest) {
+      if (component.isInstanceOf[Decorator])
+        return component.asInstanceOf[Decorator].remove(manifest)
+      else
+        return component
+    }
+    else {
+      if (component.isInstanceOf[Decorator])
+        component = component.asInstanceOf[Decorator].remove(manifest)
+      return this
+    }
   }
 
   def firstName() = component.firstName
