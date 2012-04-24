@@ -47,6 +47,13 @@ object Demo {
         (human: Teacher) => println(
             "Full name: " + human.fullName))
 
+    var withPassport = new WithPassport(teacher, "39004134482")
+    println("Decorated with Passport")
+    show(withPassport,
+        (human: WithPassport) => println(
+            "Passport information: " +
+            human.passportInformation()))
+
     println("End.")
   }
 

@@ -18,6 +18,13 @@ class Decorator(
       None
     }
 
+  def getUndecorated(): IHuman = {
+    if (component.isInstanceOf[Decorator])
+      component.asInstanceOf[Decorator].getUndecorated()
+    else
+      component
+  }
+
   def firstName() = component.firstName
   def lastName() = component.lastName
   override def fullName() = component.fullName
